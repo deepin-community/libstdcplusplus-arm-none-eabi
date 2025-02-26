@@ -1,0 +1,3 @@
+libstdc++-arm-none-eabi-picolibc binary: arch-independent-package-contains-binary-or-object
+libstdc++-arm-none-eabi-picolibc binary: static-library-has-unneeded-sections
+libstdc++-arm-none-eabi-picolibc binary: unstripped-static-library

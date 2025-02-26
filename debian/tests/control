@@ -1,0 +1,5 @@
+Tests: build-examples
+Restrictions:
+    allow-stderr
+Depends: @,
+ gcc-arm-none-eabi,

@@ -1,15 +1,79 @@
-Source: template-repository
-Section: unknown
+Source: libstdc++-arm-none-eabi
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Agustin Henze <tin@debian.org>
+Uploaders: Thomas Preud'homme <thomas.preudhomme@arm.com>,
+ Keith Packard <keithp@keithp.com>
+Rules-Requires-Root: no
+Build-Depends:
+ binutils-arm-none-eabi,
+ gcc-arm-none-eabi,
+ gcc-arm-none-eabi-source,
+ libnewlib-arm-none-eabi,
+ picolibc-arm-none-eabi,
+ bison,
+ debhelper (>= 10),
+ dejagnu,
+ flex,
+ gawk,
+ gettext,
+ libgmp-dev,
+ libmpc-dev,
+ libmpfr-dev,
+ libtool,
+ locales,
+ lsb-release,
+ lzma,
+ m4,
+ patchutils,
+ sharutils,
+ texinfo,
+ xz-utils,
+ zlib1g-dev,
+ rename,
+Standards-Version: 4.7.0
+Homepage: http://gcc.gnu.org/
+Vcs-Git: https://salsa.debian.org/debian/libstdcxx_arm_none_eabi_newlib.git
+Vcs-Browser: https://salsa.debian.org/debian/libstdcxx_arm_none_eabi_newlib
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libstdc++-arm-none-eabi-dev
+Section: libdevel
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ gcc-arm-none-eabi (= ${gcc:Version}),
+Description: GNU Standard C++ Library v3 for ARM Cortex-R/M processors (headers)
+ GNU Standard C++ library for embedded ARM chips using Cortex-M, and
+ Cortex-R processors.
+ .
+ This package contains shared headers
+
+Package: libstdc++-arm-none-eabi-newlib
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ libnewlib-dev,
+ libnewlib-arm-none-eabi,
+ libstdc++-arm-none-eabi-dev (= ${binary:Version}),
+ gcc-arm-none-eabi (= ${gcc:Version}),
+Description: GNU Standard C++ Library v3 for ARM Cortex-R/M processors (newlib)
+ GNU Standard C++ library for embedded ARM chips using Cortex-M, and
+ Cortex-R processors.
+ .
+ This library is built using newlib as standard C library.
+
+Package: libstdc++-arm-none-eabi-picolibc
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+ picolibc-arm-none-eabi,
+ libstdc++-arm-none-eabi-dev (= ${binary:Version}),
+ gcc-arm-none-eabi (= ${gcc:Version}),
+Description: GNU Standard C++ Library v3 for ARM Cortex-R/M processors (picolibc)
+ GNU Standard C++ library for embedded ARM chips using Cortex-M, and
+ Cortex-R processors.
+ .
+ This library is built using picolibc as standard C library.
