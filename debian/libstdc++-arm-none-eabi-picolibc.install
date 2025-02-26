@@ -1,0 +1,2 @@
+picolibc/usr/arm-none-eabi/lib/* /usr/lib/picolibc/arm-none-eabi/lib/
+picolibc-release/usr/arm-none-eabi/lib/* /usr/lib/picolibc/arm-none-eabi/lib/release/

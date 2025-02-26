@@ -1,5 +1,208 @@
-template-repository (1.0-1) unstable; urgency=medium
+libstdc++-arm-none-eabi (28) unstable; urgency=medium
 
-  * Initial release
+  * Rebuild for new picolibc and toolchain
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Keith Packard <keithp@keithp.com>  Wed, 05 Feb 2025 10:30:29 -0800
+
+libstdc++-arm-none-eabi (27) unstable; urgency=medium
+
+  * Rebuild for new picolibc and toolchain
+
+  * Update standards version to 4.7.0
+
+ -- Keith Packard <keithp@keithp.com>  Thu, 26 Sep 2024 09:13:04 -0700
+
+libstdc++-arm-none-eabi (26) unstable; urgency=medium
+
+  * Rebuild for new picolibc and toolchain
+
+ -- Keith Packard <keithp@keithp.com>  Mon, 19 Feb 2024 16:21:28 -0800
+
+libstdc++-arm-none-eabi (25) unstable; urgency=medium
+
+  * Rebuild for new picolibc (1.8.6)
+
+  * Rebuild for new toolchain (15:13.2.rel1) (Closes: #1050327)
+    (Closes: #1052348)
+
+ -- Keith Packard <keithp@keithp.com>  Thu, 18 Jan 2024 12:20:55 -0800
+
+libstdc++-arm-none-eabi (24) unstable; urgency=medium
+
+  * Rebuild for new toolchain (15:12.3.rel1)
+
+ -- Keith Packard <keithp@keithp.com>  Thu, 10 Aug 2023 18:38:48 -0700
+
+libstdc++-arm-none-eabi (23) unstable; urgency=medium
+
+  * Rebuild for new toolchain (15:12.2.rel1)
+
+ -- Keith Packard <keithp@keithp.com>  Thu, 22 Dec 2022 12:41:15 -0800
+
+libstdc++-arm-none-eabi (22) unstable; urgency=medium
+
+  * Avoid build-machine compiler flags (Closes: #1014619)
+
+  * Rebuild so gcc dependency works again (Closes: #1020619)
+
+ -- Keith Packard <keithp@keithp.com>  Wed, 12 Oct 2022 17:27:29 -0700
+
+libstdc++-arm-none-eabi (21) unstable; urgency=medium
+
+  * New arm gcc release (11.3.rel1)
+
+  * New picolibc version (1.7.9)
+
+ -- Keith Packard <keithp@keithp.com>  Tue, 11 Oct 2022 12:23:56 -0700
+
+libstdc++-arm-none-eabi (20) unstable; urgency=medium
+
+  * New picolibc version (1.7.6)
+
+  * Also build 'release' version of libstdc++ 
+
+ -- Keith Packard <keithp@keithp.com>  Fri, 25 Mar 2022 15:22:56 -0700
+
+libstdc++-arm-none-eabi (19) unstable; urgency=medium
+
+  * Fix picolibc version to use --enable-cstdio=stdio_pure to avoid
+    depending on posix APIs.
+
+ -- Keith Packard <keithp@keithp.com>  Sun, 30 Jan 2022 17:50:08 -0800
+
+libstdc++-arm-none-eabi (18) unstable; urgency=medium
+
+  * Make build more reproducible by adding dpkg-buildflags options to
+    builds.
+
+ -- Keith Packard <keithp@keithp.com>  Tue, 25 Jan 2022 18:38:39 -0800
+
+libstdc++-arm-none-eabi (17) unstable; urgency=medium
+
+  * Fix binary packages dependency on -dev package (was using wrong version).
+
+ -- Keith Packard <keithp@keithp.com>  Tue, 18 Jan 2022 14:46:26 -0800
+
+libstdc++-arm-none-eabi (16) unstable; urgency=medium
+
+  * Make -dev package also depend on matching gcc-arm-none-eabi.
+
+ -- Keith Packard <keithp@keithp.com>  Tue, 18 Jan 2022 10:30:35 -0800
+
+libstdc++-arm-none-eabi (15) unstable; urgency=medium
+
+  * Depend on matching gcc-arm-none-eabi-verison (Closes: #998365)
+
+ -- Keith Packard <keithp@keithp.com>  Sun, 16 Jan 2022 11:34:21 -0800
+
+libstdc++-arm-none-eabi (14) unstable; urgency=medium
+
+  * gcc-arm-none-eabi new release 15:10-2020-q4-major
+  * Add picolibc support
+  * Split includes to separate package to share
+
+ -- Keith Packard <keithp@keithp.com>  Thu, 15 Jul 2021 14:27:05 -0700
+
+libstdc++-arm-none-eabi (13) unstable; urgency=medium
+
+  * gcc-arm-none-eabi new release 15:8-2019-q3-1
+  * Change salsa ci filename to standard name
+  * Update salsa ci yml configuration
+
+ -- Joaquin de Andres <me@xcancerberox.com.ar>  Fri, 06 Mar 2020 09:43:26 +0100
+
+libstdc++-arm-none-eabi (12) unstable; urgency=medium
+
+  * Remove `--with autotools-dev`, it's run by default since dh 9
+  * Add (autopkg) tests
+  * Disable reprotest because runners have really low resources
+  * Remove b-dpendencies on libisl-0.18-dev and libcloog-isl-dev
+    (Closes: #921856)
+
+ -- Agustin Henze <tin@debian.org>  Mon, 11 Feb 2019 06:49:38 +0000
+
+libstdc++-arm-none-eabi (11) unstable; urgency=medium
+
+  * Change obsolete priority extra to optional
+  * Bump Standards-version to 4.2.0 (No changes needed)
+  * Update Vcs fields pointing to salsa
+  * Update package description
+  * Use specific version libisl-0.18-dev
+  * Remove short-wchar flag
+
+ -- Agustin Henze <tin@debian.org>  Sun, 12 Aug 2018 14:43:05 +0200
+
+libstdc++-arm-none-eabi (10) unstable; urgency=medium
+
+  * Use new multilib profile
+  * Add missing b-dependency on rename
+  * Bumped Standard-Version to 4.0.0 (no changes required)
+
+ -- Agustin Henze <tin@debian.org>  Wed, 20 Sep 2017 20:02:53 -0300
+
+libstdc++-arm-none-eabi (9) unstable; urgency=medium
+
+  * Rebuild using 15:5.4.1+svn241155-1 (Closes: #845416)
+
+ -- Agustin Henze <tin@debian.org>  Fri, 09 Dec 2016 10:28:27 -0300
+
+libstdc++-arm-none-eabi (8) unstable; urgency=medium
+
+  * Remove dependency on gcc-4.9-source and add dependency on
+    gcc-arm-none-eabi-source
+  * Update debian/rules to use gcc-arm-none-eabi as source
+  * Remove debian_patches.txt
+  * Rebuild using 15:4.9.3+svn227297-1
+
+ -- Agustin Henze <tin@debian.org>  Mon, 31 Aug 2015 11:02:27 -0300
+
+libstdc++-arm-none-eabi (7) unstable; urgency=medium
+
+  * Remove python files, already delivered by libstdc++ (Closes: #787913)
+
+ -- Agustin Henze <tin@debian.org>  Mon, 22 Jun 2015 09:12:01 -0300
+
+libstdc++-arm-none-eabi (6) unstable; urgency=medium
+
+  * Update to gcc-4.9
+  * Update debian patches list
+  * Bumped Standard-Version to 3.9.6 (no changes required)
+  * Switch to dpkg-source 3.0 (native) format
+
+ -- Agustin Henze <tin@debian.org>  Fri, 22 May 2015 17:48:48 -0300
+
+libstdc++-arm-none-eabi (5) experimental; urgency=medium
+
+  * Rebuild using gcc-4.8-source_4.8.3-15
+
+ -- Agustin Henze <tin@debian.org>  Mon, 01 Dec 2014 14:45:13 -0300
+
+libstdc++-arm-none-eabi (4) unstable; urgency=medium
+
+  * Keep exceptions in the speed optimized version.
+  * Use _nano suffix instead of _s for size optimized version of libraries.
+  * Include pretty printer debug files.
+  * Add myself to Uploaders.
+  * Disable testing: with exception handling the tests actually run and it
+    takes too much time.
+
+ -- Thomas Preud'homme <thomas.preudhomme@arm.com>  Thu, 21 Aug 2014 06:27:59 +0000
+
+libstdc++-arm-none-eabi (3) unstable; urgency=medium
+
+  * Rebuilt using current gcc version (Closes: #751320)
+
+ -- Agustin Henze <tin@debian.org>  Wed, 06 Aug 2014 17:50:55 -0300
+
+libstdc++-arm-none-eabi (2) unstable; urgency=medium
+
+  * Remove libstdc++-arm-wno-abi.diff patch from debian_patches.txt
+    (Closes: #750324)
+
+ -- Agustin Henze <tin@debian.org>  Fri, 13 Jun 2014 11:40:50 -0300
+
+libstdc++-arm-none-eabi (1) unstable; urgency=medium
+
+  * Initial release. (Closes: #736167)
+
+ -- Agustin Henze <tin@debian.org>  Tue, 28 Jan 2014 08:18:44 -0300
